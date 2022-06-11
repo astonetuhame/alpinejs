@@ -9,6 +9,7 @@
       defer
       src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"
     ></script>
+    <script src="app.js"></script>
   </head>
   <body>
     <!-- x-data, x-text, x-html -->
@@ -23,7 +24,7 @@
     </div> -->
 
     <!-- x-data with methods -->
-    <div
+    <!-- <div
       x-data="{message: 'Click to change',
      change(){
         this.message = 'Changed message';
@@ -31,6 +32,21 @@
 }"
     >
       <span x-text="message" @click="change()"></span>
+    </div> -->
+
+    <!-- Re-usable Data -->
+    <div x-data="dropdown">
+        <button @click="toggle">Open/Close</button>
+        <div x-show="open">
+            Content...
+        </div>
     </div>
+    <div x-data="dropdown">
+        <button @click="toggle">Open/Close</button>
+        <div x-show="open">
+            Content...
+        </div>
+    </div>
+
   </body>
 </html>
