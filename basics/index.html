@@ -73,12 +73,31 @@
 
     <!-- Scoping -->
 
-    <div x-data="{name: 'Zura', age:30, gender:'male'}">
+    <!-- <div x-data="{name: 'Zura', age:30, gender:'male'}">
         <div x-data="{name:'John', age:25}">
             <div x-data="{name:'Mary'}">
                 <p x-text="name"></p>
             </div>
         </div>
+    </div> -->
+
+    <!-- Getters & Setters -->
+    <div x-data="{
+        open:false,
+        get isOpen(){
+            return this.open
+        },
+        set isOpen(open){
+            this.open = !this.open
+        },
+        toggle(){
+            this.isOpen = !this.isOpen
+        }
+    }">
+    <button @click="toggle">Open/Close</button>
+    <div x-show="open">
+        Content...
+    </div>
     </div>
 
 
