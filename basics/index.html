@@ -35,7 +35,7 @@
     </div> -->
 
     <!-- Re-usable Data -->
-    <div x-data="dropdown">
+    <!-- <div x-data="dropdown">
         <button @click="toggle">Open/Close</button>
         <div x-show="open">
             Content...
@@ -46,7 +46,14 @@
         <div x-show="open">
             Content...
         </div>
+    </div> -->
+
+    <!-- Data-less components -->
+    <div x-data @click="alert('Something')">
+        Click me
     </div>
+
+
 
   </body>
 </html>
