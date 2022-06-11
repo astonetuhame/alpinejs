@@ -49,8 +49,13 @@
     </div> -->
 
     <!-- Data-less components -->
-    <div x-data @click="alert('Something')">
+    <!-- <div x-data @click="alert('Something')">
         Click me
+    </div> -->
+
+    <!-- Data coming from the store -->
+    <div x-data x-text="$store.currentUser.posts">
+
     </div>
 
 

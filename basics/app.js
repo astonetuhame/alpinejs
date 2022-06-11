@@ -6,6 +6,11 @@ document.addEventListener("alpine:init", () => {
         }
     }))
 
+    Alpine.store('currentUser'  ,{
+        username: 'astonetuhame',
+        posts: ['Post1', 'Post2', 'Post3']
+    })
+
 })
 
 
