@@ -59,7 +59,7 @@
     </div> -->
 
     <!-- x-init -->
-    <div x-init="console.log('Init')">
+    <!-- <div x-init="console.log('Init')">
     </div>
     <div x-data="{
         init(){
@@ -69,7 +69,17 @@
     <div x-data="{todo: {}}"
         x-init="todo = await ((await fetch('https://jsonplaceholder.typicode.com/todos/1')).json())">
         <p x-text="todo.title"></p>
-    ></div>
+    ></div> -->
+
+    <!-- Scoping -->
+
+    <div x-data="{name: 'Zura', age:30, gender:'male'}">
+        <div x-data="{name:'John', age:25}">
+            <div x-data="{name:'Mary'}">
+                <p x-text="name"></p>
+            </div>
+        </div>
+    </div>
 
 
 
