@@ -142,11 +142,28 @@
     </div> -->
 
     <!-- x-for in range -->
-    <div x-data>
+    <!-- <div x-data>
         <template x-for="n in 5">
             <p x-text="n"></p>
         </template>
+    </div> -->
+
+    <!-- x-bind:class -->
+    <div x-data="{clicked:false}">
+        <button class="bordered" x-bind:class="clicked ? 'yellow' :''" @click="clicked=true">
+            Clicked
+        </button>
+        
     </div>
+    <style>
+        .bordered{
+            border: 2px solid brown
+        }
+        .yellow {
+            background-color: yellow;
+        }
+    </style>
+
 
 
   </body>
