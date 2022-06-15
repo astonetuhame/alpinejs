@@ -133,12 +133,19 @@
     </div> -->
 
     <!-- x-for -->
-    <div x-data="{posts:[{id:1,title:'Post 1'},
+    <!-- <div x-data="{posts:[{id:1,title:'Post 1'},
         {id:2,title:'Post 2'}
     ]}">
     <template x-for="p in posts" :key="post.id">
         <h2 x-text="p.title"></h2>
     </template>
+    </div> -->
+
+    <!-- x-for in range -->
+    <div x-data>
+        <template x-for="n in 5">
+            <p x-text="n"></p>
+        </template>
     </div>
 
 
