@@ -117,7 +117,7 @@
     </div> -->
 
     <!-- x-if -->
-    <div x-data="{
+    <!-- <div x-data="{
         open:false,
         toggle(){
             this.open = !this.open
@@ -130,8 +130,16 @@
     </div>
     </template>
     
-    </div>
+    </div> -->
 
+    <!-- x-for -->
+    <div x-data="{posts:[{id:1,title:'Post 1'},
+        {id:2,title:'Post 2'}
+    ]}">
+    <template x-for="p in posts" :key="post.id">
+        <h2 x-text="p.title"></h2>
+    </template>
+    </div>
 
 
   </body>
